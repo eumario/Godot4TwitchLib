@@ -182,12 +182,9 @@ public class TwitchBase
         var api = new TwitchAPI();
         api.Settings.ClientId = BotSettings!.ClientId;
         api.Settings.AccessToken = BotSettings!.ChatToken;
-        api.Settings.Secret = BotSettings!.ClientSecret;
 
         var oauthedUser = await api.Helix.Users.GetUsersAsync();
         BotSettings.BotName = oauthedUser.Users[0].DisplayName;
-        
-        //api.Settings.AccessToken = BotSettings.OAuthToken;
 
         var channelUser = await api.Helix.Users.GetUsersAsync(logins: new List<string> { BotSettings.Channel });
         BotSettings.ChannelId = channelUser.Users[0].Id;
