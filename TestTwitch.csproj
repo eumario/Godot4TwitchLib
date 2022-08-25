@@ -1,0 +1,20 @@
+<Project Sdk="Godot.NET.Sdk/4.0.0-dev8">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="NetCoreServer" Version="6.5.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="TwitchLib" Version="3.4.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="secrets.json" />
+    <Content Include="secrets.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+</Project>
