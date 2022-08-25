@@ -27,3 +27,7 @@ Any questions, please feel free to let me know.
 The main reason for doing this, is to show a major feature that we finally get in C# in Godot 4.0.  Currently in the 3.x Tree in Godot, you have to use Godot's networking functions for SSL Connections, such as HTTPS Servers, WSS (WebSocket Secure) connections, cause Mono does not trust any certificate natively installed on the end-user's computer.  Which eliminates many C# libraries that use SSL Connections.
 
 With the work that neikeq on Github has done with porting to Dotnet6, this has solved this major issue, and made it more complete implementation.  This should also show, libraries like Github's API, and various other ones, that SSL will no longer be a blocking issue.
+
+## Godot 4.0 Alpha has no Mono Release
+
+This repo was created before the release on 8/25/2022 of Godot 4.0 Alpha, which should be one of the last Alphas to be released.  This may of course change, but currently the Alpha release does not have the Dotnet 6 build yet.  Currently, there is a Linux build available at https://github.com/lewiji/godot/releases that can be used, or you can build the dotnet6 version from the master tree of Godot.
